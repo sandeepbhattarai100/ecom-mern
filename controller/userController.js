@@ -101,7 +101,7 @@ const logout = asyncHandler(async (req, res) => {
             httpOnly: true,
             secure: true
         });
-         res.sendStatus(204); //forbidden
+        res.sendStatus(204); //forbidden
     }
     await User.findOneAndUpdate({ refreshToken }, {
         refreshToken: ''
@@ -110,7 +110,7 @@ const logout = asyncHandler(async (req, res) => {
         httpOnly: true,
         secure: true
     });
-     res.sendStatus(204); //forbidden
+    res.sendStatus(204); //forbidden
 
 
 });
